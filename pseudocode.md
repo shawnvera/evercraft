@@ -69,7 +69,9 @@
 
 
 #OOP#
+
     **Classes:**
+
             class Character:
                 def __init__(self, name):
                     self.name = 
@@ -87,9 +89,9 @@
                     level: 1
 
 
- c = Character()
+                c = Character()
 
- c.name
- c.xp
+                c.name
+                c.xp
 
- separate class that interacts with the Character class?
+                separate class that interacts with the Character class?
