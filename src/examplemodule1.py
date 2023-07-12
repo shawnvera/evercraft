@@ -5,8 +5,12 @@ class Character:
                 self.armor_class = 10
                 self.hp = 5
                 self.attack_power = 5
-                self.roll = 20
+                self.roll = 19
         
+        def get_name(self, n):
+            self.name = "Cletus"
+
+
         def set_name(self, n):
             self.name = n
 
