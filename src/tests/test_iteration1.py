@@ -68,7 +68,20 @@ def test_attack_damage():
 
 # Feature: Character has abilities scores
 
+def test_attributes():
+    att = Character()
+    assert att.attributes["wisdom"] == 10
+
 # Feature: Character ability modifiers modify attributes
+
+def test_update_attributes():
+    mod = Character()
+
+    if (mod.roll == 19):
+        mod.attributes["strength": 14]
+    assert mod.attributes == 14
+
+
 
 # Feature: A character can gain experience when attacking
 
