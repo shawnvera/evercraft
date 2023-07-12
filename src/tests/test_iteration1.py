@@ -65,3 +65,11 @@ def test_attack_damage():
      if (ad.roll >= goblin.armor_class):
         goblin.hp -= 1
      assert goblin.hp == 4
+
+# Feature: Character has abilities scores
+
+# Feature: Character ability modifiers modify attributes
+
+# Feature: A character can gain experience when attacking
+
+# Feature: A character can level
