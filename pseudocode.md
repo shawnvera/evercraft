@@ -71,8 +71,8 @@
 #OOP#
     **Classes:**
             class Character:
-                def __init__(self):
-                    "name":
+                def __init__(self, name):
+                    self.name = 
                     "alignment": "good", "evil", "neutral"
                     "armor_class": 10
                     "hp": 5
