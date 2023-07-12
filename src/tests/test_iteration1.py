@@ -39,11 +39,37 @@ def test_set_get_alignment():
 
 def test_armor_class():
     armor = Character()
-    armor.armor_class = 10
+ 
     assert armor.armor_class == 10
 
 def test_hp():
     hp = Character()
-    hp.hp = 5
+    
     assert hp.hp == 5
 
+# Feature: player attack
+
+def test_attack_power():
+     ap = Character()
+     goblin = Character()
+
+     assert ap.roll >= goblin.armor_class
+        
+# Feature Character can be damaged
+
+def test_attack_damage():
+     ad = Character()
+     goblin = Character()
+
+     
+     if (ad.roll >= goblin.armor_class):
+        goblin.hp -= 1
+     assert goblin.hp == 4
+
+# Feature: Character has abilities scores
+
+# Feature: Character ability modifiers modify attributes
+
+# Feature: A character can gain experience when attacking
+
+# Feature: A character can level
