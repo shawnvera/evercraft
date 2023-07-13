@@ -106,3 +106,9 @@ def test_can_level():
         level.level = level.level + 1
 
     assert level.level == 2
+
+#Stat increases with test_can_level
+
+#def test_on_level
+
+

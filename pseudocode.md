@@ -1,3 +1,27 @@
+#MVP#
+
+Two (2) iterations of the project should be completed by Friday
+
+#MoSCow#
+
+    Must haves:
+        1. Pseudocode should follow the examples and step through each individual task.
+        2. Code must be commented well.
+        3. Tests should be written first, then code written to pass the tests.
+    
+    Should haves:
+        1. iteration 3
+
+    Could haves:
+        1. iteration 4
+
+    Won't haves:
+        1. coded dice roll
+
+
+
+**Iteration 1**
+
 #Agile stories#
 
     ##Iteration 1##
@@ -95,3 +119,55 @@
                 c.xp
 
                 separate class that interacts with the Character class?
+
+
+**Iteration 2**
+
+#agile stories#
+
+    1. As a player I want a character to have a class that customizes its capabilities so that I can play more interesting characters
+
+    2. As a player I want to play a Fighter so that I can kick ass and take names
+
+    3. As a player I want to play a Rogue so that I can defeat my enemies with finesse
+
+    4. As a player I want to play a Monk so that I can enjoy being an Asian martial-arts archetype in a Medieval European setting
+
+    5. As a player I want to play a Paladin so that I can smite evil, write wrongs, and be a self-righteous jerk
+
+#Questions#
+    - what is the best way to set class specific stat changes?
+        -use object that stores data and modifies character?
+        -loop through stats based on character "class type" and adjust values by checking "class type"?
+
+
+#Procedural#
+
+    BEGIN
+    INIT create new class for Classes
+    TEST test new classes do make changes to base attributes
+    END
+
+#Functional#
+
+    the new class will modify the character
+    
+    class Class:
+        attributes to be changed
+
+    
+
+
+#OOP#
+
+    class Class:
+    def __init__(self):
+        self.fighter = {
+            Character[strength] + 3
+        }
+        self.rogue = 0
+        self.monk = {
+            Character[hp + 1],
+
+        }
+        self.paladin = 0
