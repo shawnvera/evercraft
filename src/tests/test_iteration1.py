@@ -109,6 +109,14 @@ def test_can_level():
 
 #Stat increases with test_can_level
 
-#def test_on_level
+def test_on_level():
+    up = Character()
+    up.level = 2
+    if up.level == 2:
+        up.hp = up.hp + 5
+        up.attack_power = up.attack_power + 1
+
+    assert up.hp == 10
+    assert up.attack_power == 6
 
 

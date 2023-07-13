@@ -16,7 +16,7 @@ class Character:
                 }
                 self.xp = 0
                 self.level = 1
-                self.class = 'Monk'
+                self.type = ['Monk', "Paladin", "Fighter", "Rogue"]
 
 
                 
