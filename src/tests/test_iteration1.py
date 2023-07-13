@@ -78,11 +78,31 @@ def test_update_attributes():
     mod = Character()
 
     if (mod.roll == 19):
-        mod.attributes["strength": 14]
-    assert mod.attributes == 14
-
-
+        mod.attributes["constitution"] = 10 + 4
+    if mod.attributes["constitution"] == 14:
+        mod.hp = mod.hp + 4
+    assert mod.hp == 9
+    assert mod.attributes["constitution"] == 14
 
 # Feature: A character can gain experience when attacking
 
+def test_gain_xp():
+    xp = Character()
+
+    if xp.roll >= xp.armor_class:
+        attack = True
+        xp.xp = xp.xp + 10
+    
+
+    assert xp.xp == 10
+
 # Feature: A character can level
+
+def test_can_level():
+    level = Character()
+
+    level.xp = 1000
+    if level.xp == 1000:
+        level.level = level.level + 1
+
+    assert level.level == 2
