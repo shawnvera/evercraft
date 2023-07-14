@@ -11,27 +11,29 @@ from examplemodule2 import Paladin
 def test_mon_base_roll():
     mon = Monk()
 
-    mon.level = 2
+    mon.mon_base_roll(2)
    
-    if mon.level == 2:
-        mon.base_att_roll_on_level = mon.base_att_roll_on_level + 1
+    # if mon.level == 2:
+    #     mon.base_att_roll_on_level = mon.base_att_roll_on_level + 1
 
-    mon.level = 3
-    if mon.level == 3:
-        mon.base_att_roll_on_level = mon.base_att_roll_on_level + 1
+    # mon.level = 3
+    # if mon.level == 3:
+    #     mon.base_att_roll_on_level = mon.base_att_roll_on_level + 1
 
-    assert mon.base_att_roll_on_level == 3
+    assert mon.base_att_roll_on_level == 2
 
 def test_monk_hp():
     mon = Monk()
 
-    mon.level = 2
-    if mon.level == 2:
-        mon.hp = mon.hp + 6
+    mon.monk_hp(2, 6)
+
+    # mon.level = 2
+    # if mon.level == 2:
+    #     mon.hp = mon.hp + 6
     
-    mon.level = 3
-    if mon.level == 3:
-        mon.hp = mon.hp + 6
+    # mon.level = 3
+    # if mon.level == 3:
+    #     mon.hp = mon.hp + 6
     
     assert mon.hp == 18
 
