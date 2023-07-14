@@ -1,10 +1,10 @@
 class Character:
-        def __init__(self, level = 1, roll = 19, armor = 10,):
+        def __init__(self, level = 1, roll = 19, armor = 10):
                 self.name = "Cletus"
                 self.alignment = ("good", "evil", "neutral")
                 self.armor_class = 10
                 self.hp = 5
-                self.attack_power = 1
+                self.attack_power = 5
                 self.roll = 19
                 self.attributes = {
                     "strength": 10,
