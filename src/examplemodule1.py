@@ -91,6 +91,7 @@ class Character:
   
 
 # #Stat increases with test_can_level
+# refactor this - getters and setters for different attributes
 
         def on_level(self, level, hp, attack_power):
             if self.level == 2:
