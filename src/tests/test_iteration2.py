@@ -12,6 +12,7 @@ def test_mon_base_roll():
     mon = Monk()
 
     mon.level = 2
+   
     if mon.level == 2:
         mon.base_att_roll_on_level = mon.base_att_roll_on_level + 1
 

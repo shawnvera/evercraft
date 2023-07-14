@@ -12,9 +12,10 @@ def test_get_name():
     assert char.name == "Cletus"
 
 def test_set_name():
-    char2 = Character()
-    char2.name = "Better Cletus"
-    assert char2.name == "Better Cletus" 
+    char = Character()
+    char.set_name('Better Cletus')
+    #char2.name = "Better Cletus"
+    assert char.name == "Better Cletus" 
 
 # Feature: Alignment
 
@@ -49,11 +50,13 @@ def test_hp():
 
 # Feature: player attack
 
-def test_attack_power():
+def test_can_attack():
      ap = Character()
      goblin = Character()
+     ap.can_attack(10, 20)
 
-     assert ap.roll >= goblin.armor_class
+     assert ap.attack == True
+     
         
 # Feature Character can be damaged
 
@@ -76,34 +79,27 @@ def test_attributes():
 
 def test_update_attributes():
     mod = Character()
+    mod.update_attributes(19, "constitution")
 
-    if (mod.roll == 19):
-        mod.attributes["constitution"] = 10 + 4
-    if mod.attributes["constitution"] == 14:
-        mod.hp = mod.hp + 4
-    assert mod.hp == 9
     assert mod.attributes["constitution"] == 14
 
 # Feature: A character can gain experience when attacking
 
 def test_gain_xp():
     xp = Character()
-
-    if xp.roll >= xp.armor_class:
-        attack = True
-        xp.xp = xp.xp + 10
+    xp.gain_xp(True, 10)
     
-
     assert xp.xp == 10
 
 # Feature: A character can level
 
 def test_can_level():
     level = Character()
+    level.can_level(1000)
 
-    level.xp = 1000
-    if level.xp == 1000:
-        level.level = level.level + 1
+    # level.xp = 1000
+    # if level.xp == 1000:
+    #     level.level = level.level + 1
 
     assert level.level == 2
 
@@ -112,9 +108,11 @@ def test_can_level():
 def test_on_level():
     up = Character()
     up.level = 2
-    if up.level == 2:
-        up.hp = up.hp + 5
-        up.attack_power = up.attack_power + 1
+    up.on_level(2, 5, 5)
+    
+    # if up.level == 2:
+    #     up.hp = up.hp + 5
+    #     up.attack_power = up.attack_power + 1
 
     assert up.hp == 10
     assert up.attack_power == 6
